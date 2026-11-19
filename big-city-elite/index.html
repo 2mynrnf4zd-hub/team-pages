@@ -71,6 +71,18 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 
 .ticon.emoji { display: grid; place-items: center; font-size: 24px; background: transparent; }
 .what .chip { margin-top: 6px; }
 .sheet { margin: 2px 0 0; font-weight: 600; }
+.hotels { margin-top: 20px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.hotels h2 { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: .03em; text-transform: uppercase; margin: 0 0 8px; }
+.hotels ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.hotels li { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr) minmax(0, 1.2fr); gap: 4px 16px; padding: 9px 0;
+  border-top: 1px solid var(--line); font-size: 14px; align-items: baseline; }
+.hotels li:first-child { border-top: none; }
+.hotels li.closed { color: var(--muted); }
+.hotels .muted { color: var(--muted); font-size: 13px; }
+.hotels a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.due { font-weight: 600; margin-right: 10px; }
+.due.closed { font-weight: 500; }
+@media (max-width: 640px) { .hotels li { grid-template-columns: 1fr; gap: 2px; } }
 .sheet a { color: var(--accent); text-decoration: none; border-bottom: 1.5px solid currentColor; }
 footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
 footer p { margin: 0; max-width: 70ch; }
@@ -90,6 +102,7 @@ footer a { color: var(--accent); }
       "Stay to Play," so the team's place depends on families booking in the block.</p>
     <p class="sheet"><a href="https://docs.google.com/spreadsheets/d/13opcqeHcJJ1nIK4rZ3IHJ_4eCpQcHBlk_UXrCKFF6Zk/edit?gid=1180007358#gid=1180007358" target="_blank" rel="noopener">The club's tournament and hotel spreadsheet <span aria-hidden="true">↗</span></a></p>
   </header>
+  <section class="hotels" aria-labelledby="hotels-h"><h2 id="hotels-h">Hotels to book</h2><ul><li class=""><div><b>Rhode Island Rumble</b> <span class="muted">Apr 17–18</span></div><div>TownePlace Suites by Marriott Providence North Kingstown</div><div><span class="due">Book by 12/8 Noon EST</span> <a href="https://portal.thsweb.com/reservations/access/01m5fz020zcmgsxhch3m7jvmmd" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div></li><li class=""><div><b>NIKE Boston National Qualifier Weekend 3</b> <span class="muted">Mar 26–28</span></div><div>DoubleTree Suites by Hilton Boston/Cambridge</div><div><span class="due">Book by 1/6 Noon EST</span> <a href="https://portal.thsweb.com/reservations/access/01m5yy5e017gswrbjjy4ney7bf" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div></li><li class="closed"><div><b>Irish Rumble</b> <span class="muted">Mar 6–7</span></div><div>Hampton Inn York</div><div><span class="due closed">Block closed 9/9</span> <a href="https://presto.eventpipe.com/event/a5d70fa8-236c-401e-9fc3-124e4996f58e/shopKey/6a9b85ab410a97742d4b4513/search?inventory=public&amp;groupBlockId=030d0ce5-79af-4d9f-861d-87e328812884" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div></li><li class="closed"><div><b>May Madness</b> <span class="muted">May 8–9</span></div><div>Tru by Hilton Lancaster East</div><div><span class="due closed">Block closed 9/9</span> <a href="https://presto.eventpipe.com/event/f78a27da-df76-4869-904d-2eb3226c9f51/shopKey/6a9b27c296dfa23da36092eb/search?inventory=public&amp;groupBlockId=131b429e-5a1f-47cf-9b07-bac72059dcb6" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div></li><li class="closed"><div><b>New England Winterfest</b> <span class="muted">Jan 9–10</span></div><div>Marriott Hartford/Windsor Airport</div><div><span class="due closed">Block closed 11/9 at Noon EST</span> <a href="https://portal.thsweb.com/reservations/access/01m5ab0agqbb38rw318rzkzpx7" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div></li></ul></section>
   <section class="month"><h2>December 2026</h2><ol class="events"><li class="event">
   <div class="when"><span class="days">Sat</span><span class="dates">Dec 12</span></div>
   <div class="what"><div class="title"><span class="ticon emoji" aria-hidden="true">⚡</span><h3>GEVA Power League Play-In 1</h3></div><p class="where">Location to be announced</p></div>
@@ -162,7 +175,7 @@ footer a { color: var(--accent); }
   <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">I'm interested in carpooling</button></div></div>
 </li></ol></section>
   <footer>
-    <p>Updated November 19, 2026. Dates follow the club's posted schedule and can change; League Apps has the final word.</p>
+    <p>Updated November 19, 2026. Dates follow the club's posted schedule and can change.</p>
     <p>The club keeps the full list, with every hotel block, in its <a href="https://docs.google.com/spreadsheets/d/13opcqeHcJJ1nIK4rZ3IHJ_4eCpQcHBlk_UXrCKFF6Zk/edit?gid=1180007358#gid=1180007358" target="_blank" rel="noopener">tournament and hotel spreadsheet</a>.</p>
     <p>Hotel questions go to the club: <span class="mail">club@bigcityvolleyball.com</span></p>
   </footer>
