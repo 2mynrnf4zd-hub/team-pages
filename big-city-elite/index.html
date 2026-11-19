@@ -56,6 +56,7 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .act, .reply button { font: inherit; font-size: 14px; font-weight: 600; border-radius: 999px; padding: 6px 14px; cursor: pointer;
   border: 1.5px solid var(--accent); background: transparent; color: var(--accent); }
+.act.quiet-act { border-color: var(--line); color: var(--muted); }
 .act:hover, .reply button[type="submit"] { background: var(--accent); color: var(--surface); }
 .act:focus-visible, .reply button:focus-visible, .reply input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .reply { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; margin-top: 6px; padding: 12px; border-radius: 10px; background: var(--bg); }
@@ -109,72 +110,72 @@ footer a { color: var(--accent); }
   <div class="side"><span class="ticon emoji" aria-hidden="true">⚡</span><div class="when"><span class="days">Sat</span><span class="dates">Dec 12</span></div></div>
   <div class="what"><h3>GEVA Power League Play-In 1</h3><p class="where">Location to be announced</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="d78324a89d904a29aba20d05fae85fce" data-event="GEVA Power League Play-In 1" data-date="2026-12-12">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="d78324a89d904a29aba20d05fae85fce" data-event="GEVA Power League Play-In 1" data-date="2026-12-12">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="d78324a89d904a29aba20d05fae85fce" data-event="GEVA Power League Play-In 1" data-date="2026-12-12">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">🎽</span><div class="when"><span class="days">Sun</span><span class="dates">Dec 13</span></div></div>
   <div class="what"><h3>Big City Jersey Jamboree</h3><p class="where">The Infinity Sports Club</p><p class="address">12 Wright Way, Oakland, NJ 07436</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="66aa67c0ba174b188d68842a2076d24c" data-event="Big City Jersey Jamboree" data-date="2026-12-13">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="66aa67c0ba174b188d68842a2076d24c" data-event="Big City Jersey Jamboree" data-date="2026-12-13">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="66aa67c0ba174b188d68842a2076d24c" data-event="Big City Jersey Jamboree" data-date="2026-12-13">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">🏙️</span><div class="when"><span class="days">Sun</span><span class="dates">Dec 20</span></div></div>
   <div class="what"><h3>Big City Bash 14 Girls Non-GEVA</h3><p class="where">Major R. Owens Health &amp; Wellness Community Center</p><p class="address">1561 Bedford Ave, Brooklyn, NY 11225</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="3dead305ea284760a71c983acb53da26" data-event="Big City Bash 14 Girls Non-GEVA" data-date="2026-12-20">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="3dead305ea284760a71c983acb53da26" data-event="Big City Bash 14 Girls Non-GEVA" data-date="2026-12-20">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="3dead305ea284760a71c983acb53da26" data-event="Big City Bash 14 Girls Non-GEVA" data-date="2026-12-20">Can't make it</button></div></div>
 </li></ol></section><section class="month"><h2>January 2027</h2><ol class="events"><li class="event">
   <div class="side"><img class="ticon logo" src="logos/a9e28f7b86094d45a56168b15568e74c.png?v=6df49209" alt=""><div class="when"><span class="days">Sat–Sun</span><span class="dates">Jan 9–10</span></div></div>
   <div class="what"><h3>New England Winterfest</h3><p class="where">Connecticut Convention Center</p><p class="address">100 Columbus Blvd, Hartford, CT 06103</p></div>
   <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Marriott Hartford/Windsor Airport</p><p class="hotel-address">28 Day Hill Rd, Windsor, CT 06095</p><p class="deadline">Book through the club by 11/9 at Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5ab0agqbb38rw318rzkzpx7" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="a9e28f7b86094d45a56168b15568e74c" data-event="New England Winterfest" data-date="2027-01-09">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="a9e28f7b86094d45a56168b15568e74c" data-event="New England Winterfest" data-date="2027-01-09">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="a9e28f7b86094d45a56168b15568e74c" data-event="New England Winterfest" data-date="2027-01-09">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">📌</span><div class="when"><span class="days">Sun</span><span class="dates">Jan 17</span></div></div>
   <div class="what"><h3>GEVA Girls 14 Club 1</h3><p class="where">Location to be announced</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="67448890b3854484a0571c2189266c4a" data-event="GEVA Girls 14 Club 1" data-date="2027-01-17">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="67448890b3854484a0571c2189266c4a" data-event="GEVA Girls 14 Club 1" data-date="2027-01-17">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="67448890b3854484a0571c2189266c4a" data-event="GEVA Girls 14 Club 1" data-date="2027-01-17">Can't make it</button></div></div>
 </li></ol></section><section class="month"><h2>February 2027</h2><ol class="events"><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">📌</span><div class="when"><span class="days">Sat</span><span class="dates">Feb 6</span></div></div>
   <div class="what"><h3>GEVA Girls 14 Club 2</h3><p class="where">Location to be announced</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="ddaeb1f3c5394f28961f842e78c9cfcc" data-event="GEVA Girls 14 Club 2" data-date="2027-02-06">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="ddaeb1f3c5394f28961f842e78c9cfcc" data-event="GEVA Girls 14 Club 2" data-date="2027-02-06">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="ddaeb1f3c5394f28961f842e78c9cfcc" data-event="GEVA Girls 14 Club 2" data-date="2027-02-06">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><img class="ticon logo" src="logos/63bb9ab376274c24969aed11a02c9701.png?v=ee692da4" alt=""><div class="when"><span class="days">Fri–Sun</span><span class="dates">Feb 19–21</span></div></div>
   <div class="what"><h3>NIKE Boston National Qualifier Weekend 1</h3><span class="chip">Team is waitlisted</span><p class="where">The Menino Convention and Exhibition Center</p><p class="address">415 Summer St, Boston, MA 02210</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>Not announced yet</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="63bb9ab376274c24969aed11a02c9701" data-event="NIKE Boston National Qualifier Weekend 1" data-date="2027-02-19">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="63bb9ab376274c24969aed11a02c9701" data-event="NIKE Boston National Qualifier Weekend 1" data-date="2027-02-19">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="63bb9ab376274c24969aed11a02c9701" data-event="NIKE Boston National Qualifier Weekend 1" data-date="2027-02-19">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">🌆</span><div class="when"><span class="days">Sat</span><span class="dates">Feb 27</span></div></div>
   <div class="what"><h3>Big City Bash 14 Girls GEVA ATH</h3><p class="where">The Infinity Sports Club</p><p class="address">12 Wright Way, Oakland, NJ 07436</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="fa36da9e905f4934ba0b05baca9718e6" data-event="Big City Bash 14 Girls GEVA ATH" data-date="2027-02-27">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="fa36da9e905f4934ba0b05baca9718e6" data-event="Big City Bash 14 Girls GEVA ATH" data-date="2027-02-27">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="fa36da9e905f4934ba0b05baca9718e6" data-event="Big City Bash 14 Girls GEVA ATH" data-date="2027-02-27">Can't make it</button></div></div>
 </li></ol></section><section class="month"><h2>March 2027</h2><ol class="events"><li class="event">
   <div class="side"><img class="ticon logo" src="logos/4d9fd04bdccc41038737181ed730c142.png?v=914d8c4a" alt=""><div class="when"><span class="days">Sat–Sun</span><span class="dates">Mar 6–7</span></div></div>
   <div class="what"><h3>Irish Rumble</h3><p class="where">Spooky Nook Sports</p><p class="address">75 Champ Blvd, Manheim, PA 17545</p></div>
   <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Hampton Inn York</p><p class="hotel-address">1550 Mount Zion Road, York, PA 17402</p><p class="deadline">Book through the club by 9/9</p><a class="book" href="https://presto.eventpipe.com/event/a5d70fa8-236c-401e-9fc3-124e4996f58e/shopKey/6a9b85ab410a97742d4b4513/search?inventory=public&amp;groupBlockId=030d0ce5-79af-4d9f-861d-87e328812884" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="4d9fd04bdccc41038737181ed730c142" data-event="Irish Rumble" data-date="2027-03-06">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="4d9fd04bdccc41038737181ed730c142" data-event="Irish Rumble" data-date="2027-03-06">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="4d9fd04bdccc41038737181ed730c142" data-event="Irish Rumble" data-date="2027-03-06">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">🗽</span><div class="when"><span class="days">Fri–Sun</span><span class="dates">Mar 12–14</span></div></div>
   <div class="what"><h3>NYC Open</h3><p class="where">Javits Center</p><p class="address">429 11th Ave, New York, NY 10001</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="3b6187158e164029a85f09df6ca44011" data-event="NYC Open" data-date="2027-03-12">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="3b6187158e164029a85f09df6ca44011" data-event="NYC Open" data-date="2027-03-12">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="3b6187158e164029a85f09df6ca44011" data-event="NYC Open" data-date="2027-03-12">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><img class="ticon logo" src="logos/6e75cb60639d40a7b9c8d809aefc80af.png?v=7e3f455b" alt=""><div class="when"><span class="days">Fri–Sun</span><span class="dates">Mar 26–28</span></div></div>
   <div class="what"><h3>NIKE Boston National Qualifier Weekend 3</h3><p class="where">The Menino Convention and Exhibition Center</p><p class="address">415 Summer St, Boston, MA 02210</p></div>
   <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">DoubleTree Suites by Hilton Boston/Cambridge</p><p class="hotel-address">400 Soldiers Field Road, Boston, MA 02134</p><p class="deadline">Book through the club by 1/6 Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5yy5e017gswrbjjy4ney7bf" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="6e75cb60639d40a7b9c8d809aefc80af" data-event="NIKE Boston National Qualifier Weekend 3" data-date="2027-03-26">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="6e75cb60639d40a7b9c8d809aefc80af" data-event="NIKE Boston National Qualifier Weekend 3" data-date="2027-03-26">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="6e75cb60639d40a7b9c8d809aefc80af" data-event="NIKE Boston National Qualifier Weekend 3" data-date="2027-03-26">Can't make it</button></div></div>
 </li></ol></section><section class="month"><h2>April 2027</h2><ol class="events"><li class="event">
   <div class="side"><img class="ticon logo" src="logos/02908ee2b0de4a55948afa6329b6fca0.png?v=a02192dd" alt=""><div class="when"><span class="days">Sat–Sun</span><span class="dates">Apr 17–18</span></div></div>
   <div class="what"><h3>Rhode Island Rumble</h3><p class="where">Rhode Island Convention Center</p><p class="address">1 Sabin St, Providence, RI 02903</p></div>
   <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">TownePlace Suites by Marriott Providence North Kingstown</p><p class="hotel-address">55 Gate Rd, North Kingstown, RI 02852</p><p class="deadline">Book through the club by 12/8 Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5fz020zcmgsxhch3m7jvmmd" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="02908ee2b0de4a55948afa6329b6fca0" data-event="Rhode Island Rumble" data-date="2027-04-17">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="02908ee2b0de4a55948afa6329b6fca0" data-event="Rhode Island Rumble" data-date="2027-04-17">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="02908ee2b0de4a55948afa6329b6fca0" data-event="Rhode Island Rumble" data-date="2027-04-17">Can't make it</button></div></div>
 </li><li class="event">
   <div class="side"><span class="ticon emoji" aria-hidden="true">📌</span><div class="when"><span class="days">Sat</span><span class="dates">Apr 24</span></div></div>
   <div class="what"><h3>GEVA Girls 14 Club Championships</h3><p class="where">Location to be announced</p></div>
   <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="9883afe27bdb4077b4f6c681eaff6903" data-event="GEVA Girls 14 Club Championships" data-date="2027-04-24">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="9883afe27bdb4077b4f6c681eaff6903" data-event="GEVA Girls 14 Club Championships" data-date="2027-04-24">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="9883afe27bdb4077b4f6c681eaff6903" data-event="GEVA Girls 14 Club Championships" data-date="2027-04-24">Can't make it</button></div></div>
 </li></ol></section><section class="month"><h2>May 2027</h2><ol class="events"><li class="event">
   <div class="side"><img class="ticon logo" src="logos/0bb0ed9dc2564063a0af9858a9a558bf.png?v=ce2eb601" alt=""><div class="when"><span class="days">Sat–Sun</span><span class="dates">May 8–9</span></div></div>
   <div class="what"><h3>May Madness</h3><p class="where">Spooky Nook Sports</p><p class="address">75 Champ Blvd, Manheim, PA 17545</p></div>
   <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Tru by Hilton Lancaster East</p><p class="hotel-address">2320 Lincoln Highway East, Lancaster, PA 17602</p><p class="deadline">Book through the club by 9/9</p><a class="book" href="https://presto.eventpipe.com/event/f78a27da-df76-4869-904d-2eb3226c9f51/shopKey/6a9b27c296dfa23da36092eb/search?inventory=public&amp;groupBlockId=131b429e-5a1f-47cf-9b07-bac72059dcb6" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
-  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">I'm interested in carpooling</button></div></div>
+  <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No one has asked about carpooling yet</p><div class="actions"><button type="button" class="act" data-kind="carpool" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">I'm interested in carpooling</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">Can't make it</button></div></div>
 </li></ol></section>
   <footer>
     <p>Updated November 19, 2026. Dates follow the club's posted schedule and can change.</p>
@@ -188,30 +189,32 @@ footer a { color: var(--accent); }
 // VB Stats reads these emails (by the "[team page]" tag) and counts them on the page.
 (() => {
   const TO = "VBStatsB14U@icloud.com", TEAM = "B14U Elite";
-  const saved = () => { try { return localStorage.getItem("teampage-name") || ""; } catch { return ""; } };
-  const remember = (v) => { try { localStorage.setItem("teampage-name", v); } catch {} };
+  const saved = (k) => { try { return localStorage.getItem(k) || ""; } catch { return ""; } };
+  const remember = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
   document.addEventListener("click", (ev) => {
     const b = ev.target.closest(".act");
     if (!b) return;
     const card = b.closest(".event");
     card.querySelector(".reply")?.remove();
-    const carpool = b.dataset.kind === "carpool";
+    const carpool = b.dataset.kind === "carpool", absent = b.dataset.kind === "absent";
+    const key = absent ? "teampage-player" : "teampage-name";
     const f = document.createElement("form");
     f.className = "reply";
-    f.innerHTML = '<label>Your name<input name="who" required maxlength="60" autocomplete="name"></label>'
+    f.innerHTML = "<label>" + (absent ? "Player's name" : "Your name") + '<input name="who" required maxlength="60" autocomplete="name"></label>'
       + (carpool ? '<label>People<input name="people" type="number" inputmode="numeric" min="0" max="12" value="2" required></label>' : "")
       + '<div class="reply-buttons"><button type="submit">Write the email</button><button type="button" class="cancel">Cancel</button></div>'
       + '<p class="hint">' + (carpool ? "People: how many of you would ride or drive. Send 0 later to take yourselves off the list. " : "")
-      + "Your email app opens with the message written; tap Send. The page shows it within about 10 minutes.</p>";
-    f.who.value = saved();
+      + (absent ? "This goes only to the team parent; it isn't shown on this page. " : "")
+      + "Your email app opens with the message written; tap Send." + (absent ? "" : " The page shows it within about 10 minutes.") + "</p>";
+    f.who.value = saved(key);
     f.querySelector(".cancel").addEventListener("click", () => f.remove());
     f.addEventListener("submit", (e) => {
       e.preventDefault();
       const who = f.who.value.trim();
       if (!who) return;
-      remember(who);
+      remember(key, who);
       const event = b.dataset.event, people = carpool ? String(Math.max(0, Math.min(12, parseInt(f.people.value, 10) || 0))) : "";
-      const subject = (carpool ? "Carpool: " : "Hotel booked: ") + event + " (" + TEAM + ") [team page]";
+      const subject = (carpool ? "Carpool: " : absent ? "Not attending: " : "Hotel booked: ") + event + " (" + TEAM + ") [team page]";
       const body = "Tournament: " + event + "\nDate: " + b.dataset.date + "\nTournament ID: " + b.dataset.tid + "\nName: " + who + "\n"
         + (carpool ? "People: " + people + "\n" : "") + "\nSent from the " + TEAM + " tournaments page.\n";
       window.location.href = "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
