@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>B14U Elite Tournaments</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: a season schedule read top to bottom by month; each tournament is a row of date, event and hotel. */
+:root {
+  --bg: #f2f4f8; --surface: #ffffff; --ink: #141a29; --muted: #5a6377; --line: #dde2eb;
+  --accent: #1f4fd1; --gold: #f2b705; --gold-ink: #3a2b00; --chip: #fff3cc; --chip-ink: #6b4d00;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1220; --surface: #161d2e; --ink: #edf0f6; --muted: #9aa4b8; --line: #27304a;
+  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d1220; --surface: #161d2e; --ink: #edf0f6; --muted: #9aa4b8; --line: #27304a;
+  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; color-scheme: dark; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+*, *::before, *::after { box-sizing: border-box; }
+.wrap { max-width: 920px; margin: 0 auto; padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; padding-bottom: 18px; border-bottom: 3px solid var(--gold); }
+.kicker { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 54px); line-height: 1; margin: 0; letter-spacing: .01em; text-wrap: balance; }
+.sub { margin: 0; color: var(--muted); max-width: 62ch; }
+.month h2 { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: .03em; text-transform: uppercase;
+  margin: 28px 0 10px; color: var(--muted); }
+.events { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.event { display: grid; grid-template-columns: 112px minmax(0, 1fr) minmax(0, 260px); gap: 18px; align-items: start;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.when { display: grid; justify-items: center; align-content: center; gap: 2px; background: var(--gold); color: var(--gold-ink);
+  border-radius: 9px; padding: 8px 6px; text-align: center; }
+.days { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.dates { white-space: nowrap; font-family: var(--display); font-weight: 700; font-size: 21px; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.what { min-width: 0; }
+.what h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; text-wrap: balance; }
+.where { margin: 4px 0 0; font-weight: 500; }
+.address { margin: 0; color: var(--muted); font-size: 13px; }
+.chip { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px;
+  background: var(--chip); color: var(--chip-ink); margin-right: 6px; }
+.hotel { min-width: 0; border-left: 1px solid var(--line); padding-left: 16px; }
+.hotel .label { display: block; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.hotel p { margin: 2px 0 0; }
+.hotel-name { font-weight: 600; }
+.hotel.none p { color: var(--muted); }
+.deadline { font-size: 13px; }
+.note { font-size: 13px; color: var(--muted); }
+.book { display: inline-block; margin-top: 6px; font-weight: 600; font-size: 14px; color: var(--accent); text-decoration: none;
+  border-bottom: 1.5px solid currentColor; }
+.book:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
+footer p { margin: 0; max-width: 70ch; }
+footer a { color: var(--accent); }
+.mail { user-select: all; color: var(--ink); font-weight: 500; }
+@media (max-width: 640px) {
+  .event { grid-template-columns: 96px minmax(0, 1fr); gap: 12px 14px; }
+  .hotel { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--line); padding: 10px 0 0; }
+  .dates { font-size: 18px; }
+}
+</style>
+</head><body><div class="wrap">
+  <header>
+    <span class="kicker">Big City Volleyball · 2026–27 season</span>
+    <h1>B14U Elite Tournaments</h1>
+    <p class="sub">Every upcoming tournament with its dates, venue and team hotel. Book hotels through the club's link: tournaments use
+      "Stay to Play," so the team's place depends on families booking in the block.</p>
+  </header>
+  <section class="month"><h2>December 2026</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat</span><span class="dates">Dec 12</span></div>
+  <div class="what"><h3>GEVA Power League Play-In 1</h3><p class="where">Location to be announced</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li><li class="event">
+  <div class="when"><span class="days">Sun</span><span class="dates">Dec 13</span></div>
+  <div class="what"><h3>Big City Jersey Jamboree</h3><p class="where">The Infinity Sports Club</p><p class="address">12 Wright Way, Oakland, NJ 07436</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li><li class="event">
+  <div class="when"><span class="days">Sun</span><span class="dates">Dec 20</span></div>
+  <div class="what"><h3>Big City Bash 14 Girls Non-GEVA</h3><p class="where">Major R. Owens Health &amp; Wellness Community Center</p><p class="address">1561 Bedford Ave, Brooklyn, NY 11225</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li></ol></section><section class="month"><h2>January 2027</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat–Sun</span><span class="dates">Jan 9–10</span></div>
+  <div class="what"><h3>New England Winterfest</h3><p class="where">Connecticut Convention Center</p><p class="address">100 Columbus Blvd, Hartford, CT 06103</p></div>
+  <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Marriott Hartford/Windsor Airport</p><p class="deadline">Book through the club by 11/9 at Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5ab0agqbb38rw318rzkzpx7" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
+</li><li class="event">
+  <div class="when"><span class="days">Sun</span><span class="dates">Jan 17</span></div>
+  <div class="what"><h3>GEVA Girls 14 Club 1</h3><p class="where">Location to be announced</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li></ol></section><section class="month"><h2>February 2027</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat</span><span class="dates">Feb 6</span></div>
+  <div class="what"><h3>GEVA Girls 14 Club 2</h3><p class="where">Location to be announced</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li><li class="event">
+  <div class="when"><span class="days">Fri–Sun</span><span class="dates">Feb 19–21</span></div>
+  <div class="what"><h3>NIKE Boston National Qualifier Weekend 1</h3><span class="chip">Team is waitlisted</span><p class="where">The Menino Convention and Exhibition Center</p><p class="address">415 Summer St, Boston, MA 02210</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>Not announced yet</p></div>
+</li><li class="event">
+  <div class="when"><span class="days">Sat</span><span class="dates">Feb 27</span></div>
+  <div class="what"><h3>Big City Bash 14 Girls GEVA ATH</h3><p class="where">The Infinity Sports Club</p><p class="address">12 Wright Way, Oakland, NJ 07436</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li></ol></section><section class="month"><h2>March 2027</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat–Sun</span><span class="dates">Mar 6–7</span></div>
+  <div class="what"><h3>Irish Rumble</h3><p class="where">Spooky Nook Sports</p><p class="address">75 Champ Blvd, Manheim, PA 17545</p></div>
+  <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Hampton Inn York</p><p class="deadline">Book through the club by 9/9</p><a class="book" href="https://presto.eventpipe.com/event/a5d70fa8-236c-401e-9fc3-124e4996f58e/shopKey/6a9b85ab410a97742d4b4513/search?inventory=public&amp;groupBlockId=030d0ce5-79af-4d9f-861d-87e328812884" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
+</li><li class="event">
+  <div class="when"><span class="days">Fri–Sun</span><span class="dates">Mar 12–14</span></div>
+  <div class="what"><h3>NYC Open</h3><p class="where">Javits Center</p><p class="address">429 11th Ave, New York, NY 10001</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li><li class="event">
+  <div class="when"><span class="days">Fri–Sun</span><span class="dates">Mar 26–28</span></div>
+  <div class="what"><h3>NIKE Boston National Qualifier Weekend 3</h3><p class="where">The Menino Convention and Exhibition Center</p><p class="address">415 Summer St, Boston, MA 02210</p></div>
+  <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">DoubleTree Suites by Hilton Boston/Cambridge</p><p class="deadline">Book through the club by 1/6 Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5yy5e017gswrbjjy4ney7bf" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
+</li></ol></section><section class="month"><h2>April 2027</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat–Sun</span><span class="dates">Apr 17–18</span></div>
+  <div class="what"><h3>Rhode Island Rumble</h3><p class="where">Rhode Island Convention Center</p><p class="address">1 Sabin St, Providence, RI 02903</p></div>
+  <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">TownePlace Suites by Marriott Providence North Kingstown</p><p class="deadline">Book through the club by 12/8 Noon EST</p><a class="book" href="https://portal.thsweb.com/reservations/access/01m5fz020zcmgsxhch3m7jvmmd" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
+</li><li class="event">
+  <div class="when"><span class="days">Sat</span><span class="dates">Apr 24</span></div>
+  <div class="what"><h3>GEVA Girls 14 Club Championships</h3><p class="where">Location to be announced</p></div>
+  <div class="hotel none"><span class="label">Hotel</span><p>No hotel needed</p></div>
+</li></ol></section><section class="month"><h2>May 2027</h2><ol class="events"><li class="event">
+  <div class="when"><span class="days">Sat–Sun</span><span class="dates">May 8–9</span></div>
+  <div class="what"><h3>May Madness</h3><p class="where">Spooky Nook Sports</p><p class="address">75 Champ Blvd, Manheim, PA 17545</p></div>
+  <div class="hotel"><span class="label">Team hotel</span><p class="hotel-name">Tru by Hilton Lancaster East</p><p class="deadline">Book through the club by 9/9</p><a class="book" href="https://presto.eventpipe.com/event/f78a27da-df76-4869-904d-2eb3226c9f51/shopKey/6a9b27c296dfa23da36092eb/search?inventory=public&amp;groupBlockId=131b429e-5a1f-47cf-9b07-bac72059dcb6" target="_blank" rel="noopener">Booking link <span aria-hidden="true">↗</span></a></div>
+</li></ol></section>
+  <footer>
+    <p>Updated November 19, 2026. Dates follow the club's posted schedule and can change; League Apps has the final word.</p>
+    <p>The club keeps the full list, with every hotel block, in its <a href="https://docs.google.com/spreadsheets/d/13opcqeHcJJ1nIK4rZ3IHJ_4eCpQcHBlk_UXrCKFF6Zk/edit?gid=1180007358#gid=1180007358" target="_blank" rel="noopener">tournament and hotel spreadsheet</a>.</p>
+    <p>Hotel questions go to the club: <span class="mail">club@bigcityvolleyball.com</span></p>
+  </footer>
+</div>
+</body></html>
