@@ -6,16 +6,16 @@
 /* Layout: a season schedule read top to bottom by month; each tournament is a row of date, event and hotel. */
 :root {
   --bg: #f2f4f8; --surface: #ffffff; --ink: #141a29; --muted: #5a6377; --line: #dde2eb;
-  --accent: #1f4fd1; --gold: #f2b705; --gold-ink: #3a2b00; --chip: #fff3cc; --chip-ink: #6b4d00;
+  --accent: #1f4fd1; --gold: #f2b705; --gold-ink: #3a2b00; --chip: #fff3cc; --chip-ink: #6b4d00; --red: #c62828;
   --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0d1220; --surface: #161d2e; --ink: #edf0f6; --muted: #9aa4b8; --line: #27304a;
-  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; color-scheme: dark; } }
+  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; --red: #ff7a70; color-scheme: dark; } }
 :root[data-theme="dark"] {
   --bg: #0d1220; --surface: #161d2e; --ink: #edf0f6; --muted: #9aa4b8; --line: #27304a;
-  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; color-scheme: dark; }
+  --accent: #7ea2ff; --gold: #f2c23a; --gold-ink: #241a00; --chip: #3a2f10; --chip-ink: #f5d27a; --red: #ff7a70; color-scheme: dark; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
 *, *::before, *::after { box-sizing: border-box; }
 .wrap { max-width: 920px; margin: 0 auto; padding-block: 28px 40px;
@@ -56,7 +56,8 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .act, .reply button { font: inherit; font-size: 14px; font-weight: 600; border-radius: 999px; padding: 6px 14px; cursor: pointer;
   border: 1.5px solid var(--accent); background: transparent; color: var(--accent); }
-.act.quiet-act { border-color: var(--line); color: var(--muted); }
+.act.quiet-act { margin-left: auto; border-color: var(--red); color: var(--red); }   /* Not attending: far right, red (Josh, 11/20/2026) */
+.act.quiet-act:hover { background: var(--red); color: var(--surface); }
 .act:hover, .reply button[type="submit"] { background: var(--accent); color: var(--surface); }
 .act:focus-visible, .reply button:focus-visible, .reply input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .reply { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; margin-top: 6px; padding: 12px; border-radius: 10px; background: var(--bg); }
