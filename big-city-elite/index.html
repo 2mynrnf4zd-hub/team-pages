@@ -101,7 +101,10 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 
 .due.closed { font-weight: 500; }
 @media (max-width: 640px) { .hotels li { grid-template-columns: 1fr; gap: 2px; } }
 .sheet a { color: var(--accent); text-decoration: none; border-bottom: 1.5px solid currentColor; }
-.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+/* The section links stay at the top while scrolling, as on the coaches' page (Josh, 11/25/2026). */
+.jump { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 0;
+  background: var(--bg); border-bottom: 1px solid var(--line); }
+#todo-h, #hotels-h, #tournaments-h { scroll-margin-top: 64px; }
 .jump a { font-size: 13.5px; font-weight: 600; padding: 4px 12px; border-radius: 999px; text-decoration: none;
   border: 1px solid var(--line); background: var(--surface); color: var(--accent); }
 .jump a:hover { border-color: var(--accent); }
@@ -121,8 +124,8 @@ footer a { color: var(--accent); }
     <span class="kicker">Big City Volleyball · 2026–27 season</span>
     <h1>B14U Elite</h1>
     <p class="sheet"><a href="https://docs.google.com/spreadsheets/d/13opcqeHcJJ1nIK4rZ3IHJ_4eCpQcHBlk_UXrCKFF6Zk/edit?gid=1180007358#gid=1180007358" target="_blank" rel="noopener">The club's tournament and hotel spreadsheet <span aria-hidden="true">↗</span></a></p>
-    <nav class="jump" aria-label="On this page"><a href="#todo-h">Family to-dos</a><a href="#hotels-h">Hotels to book</a><a href="#tournaments-h">Tournaments</a></nav>
   </header>
+    <nav class="jump" aria-label="On this page"><a href="#todo-h">Family to-dos</a><a href="#hotels-h">Hotels to book</a><a href="#tournaments-h">Tournaments</a></nav>
   <section class="hotels todo" aria-labelledby="todo-h"><h2 id="todo-h">To do</h2><ul><li><div><b>Sign the Player/Parent Commitment Contract</b></div><div>Read the club&#x27;s contract, then have the player and a parent or guardian sign and date the last page. Give it to the coaches at the first practice.</div><div><span class="due">Due at the first practice, Mon Nov 30</span><a href="https://docs.google.com/document/d/1hQh44lDbtE92V8kUFc1qNXOEmwmjUwb4ZjppitHz-qg/edit" target="_blank" rel="noopener">The contract <span aria-hidden="true">↗</span></a></div></li><li><div><b>Identify tournament dates you cannot attend</b></div><div>Please use the &quot;not attending&quot; button below to identify any tournaments your daughter will be missing.</div><div><span class="due">As soon as possible</span></div></li><li><div><b>Complete the USAV Junior Referee trainings</b></div><div>Every player completes GE27_102 New and Renewing Junior Second Referee and GE27_103 New and Renewing Junior Scorer: 
 sign in to SportsEngine, launch the USA Volleyball Academy under the player&#x27;s profile, and find them on its homepage or in the Content Library. They show 50% when finished; USAV marks them 100% later. 
 The player needs the GEVA Junior Competition Player membership and the Big City club assignment first.</div><div><span class="due">Due December 2</span><a href="https://user.sportngin.com/users/sign_in" target="_blank" rel="noopener">SportsEngine sign-in <span aria-hidden="true">↗</span></a> <a href="https://memberships.sportsengine.com/org/garden-empire-volleyball/affiliation/big-city-volleyball-club-bcvb" target="_blank" rel="noopener">GEVA membership and club assignment <span aria-hidden="true">↗</span></a></div></li><li><div><b>Book tournament hotels</b></div><div>See below for hotel booking links and deadlines.</div><div><span class="due"></span></div></li></ul></section>
@@ -195,7 +198,7 @@ The player needs the GEVA Junior Competition Player membership and the Big City 
   <div class="rsvp"><p class="quiet"><span class="ico" aria-hidden="true">🚗</span>No ride offers or requests yet</p><div class="actions"><button type="button" class="act" data-kind="need" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">Need a ride</button><button type="button" class="act" data-kind="offer" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">Can offer a ride</button><button type="button" class="act quiet-act" data-kind="absent" data-tid="0bb0ed9dc2564063a0af9858a9a558bf" data-event="May Madness" data-date="2027-05-08">Not attending</button></div></div>
 </li></ol></section>
   <footer>
-    <p>Updated November 24, 2026. Dates follow the club's posted schedule and can change.</p>
+    <p>Updated November 25, 2026. Dates follow the club's posted schedule and can change.</p>
     <p>The club keeps the full list, with every hotel block, in its <a href="https://docs.google.com/spreadsheets/d/13opcqeHcJJ1nIK4rZ3IHJ_4eCpQcHBlk_UXrCKFF6Zk/edit?gid=1180007358#gid=1180007358" target="_blank" rel="noopener">tournament and hotel spreadsheet</a>.</p>
     <p>Hotel questions go to the club: <span class="mail">club@bigcityvolleyball.com</span></p>
   </footer>
